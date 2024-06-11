@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Tu Sitio Web
-email: tuemail@example.com
-description: >- # Descripción de tu sitio
+title: MEXICO 2700
+email: cienciaficcionenmexico@gmail.com
+description: >- 
   Este es mi sitio web personal donde comparto mis escritos y proyectos de ciencia ficción.
-baseurl: "" # La URL base para el despliegue del sitio (déjalo vacío para GitHub Pages)
-url: "https://Mexico2700.github.io" # La URL de tu sitio
+baseurl: "" 
+url: "https://mexico2700.github.io" 
 
 # Redes sociales
 twitter_username: tuusuario # Twitter/X
@@ -31,11 +31,11 @@ github_username: tuusuario
 facebook_username: tuusuario
 instagram_username: tuusuario
 youtube_username: tuusuario
-tiktok_username: tuusuario
+tiktok_username: Mexico2700
 
 # Build settings
 markdown: kramdown
-theme: minima # El tema predeterminado es minima, puedes cambiarlo si deseas
+theme: minima 
 
 plugins:
   - jekyll-feed

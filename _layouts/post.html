@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/logos/mexico2700.png' | relative_url }}" alt="Logo México 2700"></a>
+    </div>
+    <div class="header-right">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Inicio</a></li>
+        <li><a href="{{ '/cuentos' | relative_url }}">Cuentos Cortos</a></li>
+        <li><a href="{{ '/mexico2700' | relative_url }}">México 2700</a></li>
+        <li><a href="{{ '/saikyo' | relative_url }}">Saikyo</a></li>
+        <li><a href="{{ '/medio-ambiente' | relative_url }}">Medio Ambiente</a></li>
+        <li><a href="{{ '/videos' | relative_url }}">Cuentos en Video</a></li>
+        <li><a href="{{ '/about' | relative_url }}">Acerca de</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+    <p>Site Design: Tu Nombre</p>
+  </footer>
+</body>
+</html>
