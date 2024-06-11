@@ -2,44 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ "/feed.xml" | relative_url }}">
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/logos/mexico2700.png' | relative_url }}" alt="Logo México 2700"></a>
-    </div>
-    <div class="header-right">
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Inicio</a></li>
-        <li><a href="{{ '/cuentos' | relative_url }}">Cuentos Cortos</a></li>
-        <li><a href="{{ '/mexico2700' | relative_url }}">México 2700</a></li>
-        <li><a href="{{ '/saikyo' | relative_url }}">Saikyo</a></li>
-        <li><a href="{{ '/medio-ambiente' | relative_url }}">Medio Ambiente</a></li>
-        <li><a href="{{ '/videos' | relative_url }}">Cuentos en Video</a></li>
-        <li><a href="{{ '/about' | relative_url }}">Acerca de</a></li>
+
+<div id="page"><!-- Defines entire site width - Ends in Footer -->
+
+  <div id="header">
+    <a href="{{ site.baseurl }}/" id="header-logo">MEXICO 2700</a>
+    <div id="subhead">
+      <ul id="menu">
+        <li><a href="{{ site.baseurl }}/">Inicio</a></li>
+        <li><a href="{{ site.baseurl }}/cuentos">Cuentos Cortos</a></li>
+        <li><a href="{{ site.baseurl }}/mexico2700">México 2700</a></li>
+        <li><a href="{{ site.baseurl }}/saikyo">Saikyo</a></li>
+        <li><a href="{{ site.baseurl }}/medio-ambiente">Medio Ambiente</a></li>
+        <li><a href="{{ site.baseurl }}/videos">Cuentos en Video</a></li>
+        <li><a href="{{ site.baseurl }}/about">Acerca de</a></li>
       </ul>
     </div>
-  </header>
-  <main>
-    <div class="main-content">
-      {{ content }}
-    </div>
-    <aside class="sidebar">
-      <h2>Últimas Adiciones</h2>
-      <ul>
-        {% for post in site.posts limit:9 %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </aside>
-  </main>
-  <footer>
-    <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
-    <p>Site Design: Tu Nombre</p>
-  </footer>
+  </div>
+
+  <div id="main">
+    {{ content }}
+  </div>
+
+  <div id="footer">
+    <p>
+      ©2024 Gerard Traverse
+      <a href="{{ site.baseurl }}/privacy-policy">Política de Privacidad</a><br>
+      MEXICO 2700 está creado con <a href="http://jekyllrb.com/">Jekyll</a> y <a href="http://github.com/">GitHub Pages</a>
+      | Subscribe: <a href="{{ "/feed.xml" | relative_url }}">RSS Feed</a><br>
+      Diseño del Sitio: Gerard Traverse y Chatgpt
+    </p>
+  </div>
+</div>
+
 </body>
 </html>
